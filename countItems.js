@@ -7,7 +7,7 @@
 
 	var products = $('.product').each(function(){ 
 		var $this = $(this); 
-		$this.children().first().append('<div class="posAbstl zi1">'+$this.data('json').eventItemId+'</div>'); 
+		$this.children().first().append('<div class="posAbstl zi1">'+$this.data('json').eventItemItemId+'</div>'); 
 		var txt = $this.find('i').text();
 		if(txt != '')
 		{
