@@ -25,6 +25,10 @@
 	out.append('<li> Total Soldout:' + soldOut + '</li>');	
 	out.append('<li> Minimum offer:' + minOff + '</li>');
 	out.append('<li> Maximum offer:' + maxOff + '</li>');
+	if(minOff = maxOff)
+		out.append('<li> ALL ITEMS ' + max.toString()+'%');
+	else
+		out.append('SAVE UP TO '+ max.toString()+'%');
 })();
 
 //javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://livejs.com/live.js#css,notify';})();
