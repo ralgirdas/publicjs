@@ -25,7 +25,7 @@
 	out.append('<li> Total Soldout:' + soldOut + '</li>');	
 	out.append('<li> Minimum offer:' + minOff + '</li>');
 	out.append('<li> Maximum offer:' + maxOff + '</li>');
-	if(minOff = maxOff)
+	if(minOff == maxOff)
 		out.append('<li> ALL ITEMS ' + maxOff.toString()+'%');
 	else
 		out.append('SAVE UP TO '+ maxOff.toString()+'%');
