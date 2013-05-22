@@ -1,0 +1,40 @@
+(function(){   
+    var getButton = $('<button type="button">Get Soldouts</button>').insertBefore($('#items'));
+  var container = $('<div id="container" class="posAbstl zi3 bgContrast pam"></div>'); 
+    var soldoutIds = [];
+    var id = "";
+    getButton.click(function() {
+        //Go through products, collect unique soldouts
+        var products = $('.product').each(function(){ 
+			var $this = $(this); 
+            if($this.find('.soldSticker').length > 0){
+            	id = $this.data('json').eventItemItemId;
+            	if(soldoutIds.indexOf(id) < 0)	
+                	soldoutIds.push(id);	
+            }
+		});
+        //Go through products, leave only real sodouts
+        //Go through products, collect unique soldouts
+        var products = $('.product').each(function(){ 
+			var $this = $(this); 
+            if($this.find('.soldSticker').length < 1){
+                id = $this.data('json').eventItemItemId;
+                if(soldoutIds.indexOf(id) > -1){
+                	soldoutIds.splice(soldoutIds.indexOf(id),1);
+                }
+            }
+		});
+        //Put soldouts to text area  
+        var output = "";
+        $.each(soldoutIds, function(i,e){ 
+            if((i+1) % 22 == 0)
+            	output = output + e + '</br>';
+            else
+                output = output + e + ',';
+		});
+        output = output.substring(0, output.length - 1);
+        container.append(output);
+        getButton.hide();
+  		container.insertBefore($('#items'));
+	});
+})();
