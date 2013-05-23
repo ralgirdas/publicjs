@@ -1,0 +1,6 @@
+$('#usernav_login').click();
+setTimeout(function() {
+    $('#ajax_username').val('testauto727@gmail.com');
+    $('#ajax_password').val('testauto727');
+    $('#ajax_login_button').click();
+  }, 1000);
