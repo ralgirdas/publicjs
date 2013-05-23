@@ -1,0 +1,10 @@
+var d = new Date();
+var n = d.getTime();
+var randomName = 'test' + n
+$('.signupLink').click();
+setTimeout(function() {
+    $('#firstName').val(randomName);
+    $('#email').val(randomName + '@gmail.com');
+    $('#password').val(randomName)
+    $('#register').click();
+  }, 1000);
