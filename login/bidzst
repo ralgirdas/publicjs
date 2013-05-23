@@ -1,0 +1,6 @@
+$('.open_login_button').click();
+setTimeout(function() {
+    $('#username').val('testauto7');
+    $('#password').val('testauto7');
+    $('#ajax_login_button').click();
+  }, 1000);
