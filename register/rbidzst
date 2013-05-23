@@ -1,0 +1,11 @@
+var d = new Date();
+var n = d.getTime();
+var randomName = 'test' + n
+$('.open_signup_button').click();
+setTimeout(function() {
+    $('#username').val(randomName);
+    $('#email').val(randomName + '@gmail.com');
+    $('#password').val(randomName)
+    $('#passwordConfirm').val(randomName)
+    $('#ajax_signup_button').click();
+  }, 1000);
