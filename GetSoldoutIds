@@ -1,5 +1,5 @@
 (function(){   
-    var container = $('<div id="container" class="posAbstl zi3 bgContrast pam"></div>');
+    var container = $('<div id="container" class="posAbstr zi3 bgContrast pam"></div>');
     var soldoutIds = [];
     var id = "";
     //Go through products, collect unique soldouts
