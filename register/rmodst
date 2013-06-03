@@ -4,7 +4,7 @@ var randomName = 'test' + n
 $('.signupLink').click();
 setTimeout(function() {
     $('#firstName').val(randomName);
-    $('#email').val(randomName + '@gmail.com');
+    $('#email').val(randomName + '@myemail.com');
     $('#password').val(randomName)
     $('#register').click();
   }, 1000);
