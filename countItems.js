@@ -8,7 +8,7 @@
 	var products = $('.product').each(function(){ 
 		var $this = $(this); 
 		$this.children().first().append('<div class="posAbstl zi1">'+$this.data('json').eventItemItemId+'</div>'); 
-		var txt = $this.find('i').text();
+		var txt = $this.find('.sharp').text();
 		if(txt != '')
 		{
 			var val = parseInt(txt.split('%')[0]);
