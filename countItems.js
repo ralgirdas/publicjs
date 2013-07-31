@@ -8,7 +8,7 @@
 	var products = $('.product').each(function(){ 
 		var $this = $(this); 
 		$this.children().first().append('<div class="posAbstl zi1">'+$this.data('json').eventItemItemId+'</div>'); 
-		var txt = $this.find('.sharp').text();
+		var txt = $this.find('.mrs').next().text();
 		if(txt != '')
 		{
 			var val = parseInt(txt.split('%')[0]);
@@ -18,7 +18,7 @@
 		
 	});
 
-	soldOut = products.find('.soldSticker').length;
+	soldOut = products.find('.fsem1-7').length;
 
 	out = $('<ul></ul>').appendTo(out);
 	out.append('<li> Total:' + products.length + '</li>');
@@ -30,5 +30,3 @@
 	else
 		out.append('SAVE UP TO '+ maxOff.toString()+'%');
 })();
-
-//javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://livejs.com/live.js#css,notify';})();
