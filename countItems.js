@@ -20,7 +20,7 @@
     	//Go through products, collect unique soldouts
     	var products = $('.product').each(function(){ 
 	var $this = $(this); 
-        if($this.find('.fsem1-7').length > 0 && $this.context.innerText.indexOf('Sold Out') > 0){
+        if($this.find('.fsem1-7').length > 0 /*&& $this.context.innerText.indexOf('Sold Out') > 0*/){
         	soldOut++;
         }
 	});
