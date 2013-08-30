@@ -17,17 +17,13 @@
 		}	
 		
 	});
-    //Go through products, collect unique soldouts
-    var products = $('.product').each(function(){ 
-		var $this = $(this); 
+    	//Go through products, collect unique soldouts
+    	var products = $('.product').each(function(){ 
+	var $this = $(this); 
         if($this.find('.fsem1-7').length > 0 && $this.context.innerText.indexOf('Sold Out') > 0){
-        //    id = $this.data('json').eventItemItemId;
-        // 	if(soldoutIds.indexOf(id) < 0)	
-        //    	soldoutIds.push(id);	
-        soldOut++;
+        	soldOut++;
         }
 	});
-	//soldOut = products.find('.fsem1-7').length;
 
 	out = $('<ul></ul>').appendTo(out);
 	out.append('<li> Total:' + products.length + '</li>');
