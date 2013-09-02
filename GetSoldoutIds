@@ -13,7 +13,17 @@
             //}
         }
 	});
-    
+   //Go through products, leave only real sodouts
+        //Go through products, collect unique soldouts
+        var products = $('.product').each(function(){ 
+      var $this = $(this); 
+            if($this.find('.fsem1-7').length < 1){
+                id = $this.data('json').eventItemItemId;
+                if(soldoutIds.indexOf(id) > -1){
+                  soldoutIds.splice(soldoutIds.indexOf(id),1);
+                }
+            }
+    });
     //Put soldouts to text area  
     var output = "";
     $.each(soldoutIds, function(i,e){ 
