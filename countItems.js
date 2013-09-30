@@ -8,7 +8,9 @@
 	var products = $('.product').each(function(){ 
 		var $this = $(this); 
 		$this.children().first().append('<div class="posAbstl zi1">'+$this.data('json').eventItemItemId+'</div>'); 
-		var txt = $this.find('.mrs').next().text();
+
+		var txt  = $this.find('.bare.lightMedGrey.fwb.fsem1.tab-fsem0-9.pho-fsem0-9').text().replace($this.find('.bare.lightMedGrey.fwb.fsem1.tab-fsem0-9.pho-fsem0-9').first().find('.mrs').text(),'');
+		
 		if(txt != '')
 		{
 			var val = parseInt(txt.split('%')[0]);
