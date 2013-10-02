@@ -7,7 +7,7 @@
 
 	var products = $('.product').each(function(){ 
 		var $this = $(this); 
-		$this.children().first().append('<div style="color:white;background-color:red;"  class="posAbstl zi1">'+$this.data('json').eventItemItemId+'</div>'); 
+		$this.children().first().append('<div style="background-color:#33CCFF;"  class="posAbstl zi1">'+$this.data('json').eventItemItemId+'</div>'); 
 
 		var txt  = $this.find('.bare.lightMedGrey.fwb.fsem1.tab-fsem0-9.pho-fsem0-9').text().replace($this.find('.bare.lightMedGrey.fwb.fsem1.tab-fsem0-9.pho-fsem0-9').find('.mrs').text(),'');
 		
