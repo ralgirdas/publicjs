@@ -34,5 +34,5 @@
 	});
     output = output.substring(0, output.length - 1);
     container.append(output);
-  	container.insertBefore($('#items'));
+  	container.insertBefore($('.page:first'));
 })();
