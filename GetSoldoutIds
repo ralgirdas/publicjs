@@ -1,23 +1,25 @@
-(function(){   
+//Returns the list of unique sold items id
+(function(){  
     var container = $('<div id="container" class="posAbstr zi3 bgContrast pam"></div>');
     var soldoutIds = [];
     var id = "";
     //Go through products, collect unique soldouts
     var products = $('.product').each(function(){ 
-		var $this = $(this); 
-        if($this.find('.fsem1-7').length > 0){
+                var $this = $(this); 
+		if($this.find('div:contains("Sold Out")').length > 0){
+		
             //if($this.context.innerText.indexOf('Sold Out') > 0){
                 id = $this.data('json').eventItemItemId;
-        	       if(soldoutIds.indexOf(id) < 0)	
-            	       soldoutIds.push(id);	
+                       if(soldoutIds.indexOf(id) < 0)        
+                           soldoutIds.push(id);        
             //}
         }
-	});
+        });
    //Go through products, leave only real sodouts
         //Go through products, collect unique soldouts
         var products = $('.product').each(function(){ 
       var $this = $(this); 
-            if($this.find('.fsem1-7').length < 1){
+			if($this.find('div:contains("Sold Out")').length < 1){
                 id = $this.data('json').eventItemItemId;
                 if(soldoutIds.indexOf(id) > -1){
                   soldoutIds.splice(soldoutIds.indexOf(id),1);
@@ -28,11 +30,11 @@
     var output = "";
     $.each(soldoutIds, function(i,e){ 
         if((i+1) % 22 == 0)
-        	output = output + e + '</br>';
+                output = output + e + '</br>';
         else
             output = output + e + ',';
-	});
+        });
     output = output.substring(0, output.length - 1);
     container.append(output);
-  	container.insertBefore($('.page:first'));
+          container.insertBefore($('.page:first'));
 })();
