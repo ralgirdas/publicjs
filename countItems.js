@@ -1,5 +1,5 @@
 (function(){
-  var out = $('<div id="my_data_container" class="posAbstl zi3 bgContrast pam"></div>').appendTo('body');
+  var out = $('<div id="my_data_container" class="posAbstl zi3 bgContrast pam"></div>').appendTo('.page:first');
 
 	var soldOut = 0;
 	var minOff = 101;
